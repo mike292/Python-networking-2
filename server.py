@@ -1,9 +1,9 @@
 import socket
 import threading
 
-HEADER = 2048
+HEADER = 2048  # size of data
 FORMAT = "utf-8"
-SERVER = "192.168.1.11"
+SERVER = socket.gethostbyname(socket.gethostname())
 PORT = 5051
 ADDRESS = (SERVER, PORT)
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)

@@ -5,6 +5,8 @@ WIDTH = 500
 HEIGHT = 500
 BODY = (WIDTH, HEIGHT)
 BACKGROUND = (255, 255, 255)  # white
+GREEN = (0, 255, 0)
+RED = (255, 0, 0)
 window = pygame.display.set_mode(BODY)
 pygame.display.set_caption("Client")
 
@@ -63,8 +65,8 @@ def main():
     clock = pygame.time.Clock()
     network = Network()
     startPosition = readPosition(network.getPos())
-    player = Player(startPosition[0], startPosition[1], 100, 100, (0, 255, 0))
-    player2 = Player(0, 0, 100, 100, (255, 0, 0))
+    player = Player(startPosition[0], startPosition[1], 100, 100, GREEN)
+    player2 = Player(0, 0, 100, 100, RED)
 
     run = True
     while run:
